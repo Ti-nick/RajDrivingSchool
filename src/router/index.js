@@ -3,7 +3,7 @@ import Home from "../Home.vue";
 import Contact from "../Contact.vue";
 
 export default createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     { path: "/", component: Home },
     { path: "/contact", component: Contact }
