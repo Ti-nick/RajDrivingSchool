@@ -23,8 +23,10 @@ export default {
     <section class="py-5 py-lg-6">
       <div class="container">
         <div class="text-center">
+          <p class="lead mb-1 fw-semibold">
+            Phone and WhatsApp
+          </p>
           <p class="lead mb-0">
-            <span class="fw-semibold">Phone and WhatsApp:</span>
             +61 478 665 789
           </p>
         </div>
@@ -36,7 +38,8 @@ export default {
 <style scoped>
 /* ================= HERO (same as Home) ================= */
 .hero {
-  min-height: 50vh; /* same height as Home */
+  min-height: 50vh;
+  /* same height as Home */
   display: flex;
   align-items: center;
 
