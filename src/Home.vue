@@ -4,12 +4,12 @@ export default {
   data() {
     return {
       singlePricingItems: [
-        {
-          title: "45 mins session",
-          price: "A$65.00",
-          desc: "This 45-minute session offers interactive content and expert guidance tailored to your needs, focusing on building practical skills in a professional and engaging environment.",
-          link: "https://book.squareup.com/appointments/ha8lqllsr67p68/location/L3JKHMAAXNT7R/services"
-        },
+        // {
+        //   title: "45 mins session",
+        //   price: "A$65.00",
+        //   desc: "This 45-minute session offers interactive content and expert guidance tailored to your needs, focusing on building practical skills in a professional and engaging environment.",
+        //   link: ""
+        // },
         {
           title: "60 mins session",
           price: "A$80.00",
@@ -41,13 +41,13 @@ export default {
           price: "A$398.00",
           desc: "Five individual driving lessons, each lasting 60 minutes.",
           link: "https://square.link/u/LJhSPz3s"
-        },
-        {
-          title: "5 Driving Lessons (45 Minutes Each)",
-          price: "A$321.00",
-          desc: "Five individual driving lessons, each lasting 45 minutes.",
-          link: "https://square.link/u/wYQRj89S"
         }
+        // ,{
+        //   title: "5 Driving Lessons (45 Minutes Each)",
+        //   price: "A$321.00",
+        //   desc: "Five individual driving lessons, each lasting 45 minutes.",
+        //   link: ""
+        // }
       ]
     };
   }
