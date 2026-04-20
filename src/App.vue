@@ -49,6 +49,18 @@
 
     <!-- Page content -->
     <router-view />
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer__brand">RAJ DRIVING SCHOOL</p>
+        <nav class="site-footer__nav">
+          <router-link to="/" class="site-footer__link">Home</router-link>
+          <router-link to="/contact" class="site-footer__link">Contact</router-link>
+        </nav>
+        <p class="site-footer__copy">&copy; {{ new Date().getFullYear() }} Raj Driving School. All rights reserved.</p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -128,5 +140,49 @@ export default {
 
 .nav-link.active {
   color: #000000 !important;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.site-footer__brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer__nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer__link {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.site-footer__link:hover,
+.site-footer__link.router-link-active {
+  color: #f9d000;
+}
+
+.site-footer__copy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 0;
 }
 </style>

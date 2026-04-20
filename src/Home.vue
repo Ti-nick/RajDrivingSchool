@@ -115,6 +115,9 @@ export default {
           </div>
         </div>
 
+        <!-- Divider -->
+        <hr class="pricing-divider" />
+
         <!-- Packages -->
         <div class="text-center mb-5">
           <h2 class="fw-bold mb-2">Package Lesson Pricing</h2>
@@ -186,6 +189,13 @@ export default {
   background-color: #e2bc00;
   border-color: #e2bc00;
   color: #ffffff;
+}
+
+/* ================= DIVIDER ================= */
+.pricing-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.50);
+  margin: 1rem 0 3rem;
 }
 
 /* ================= SPACING ================= */
