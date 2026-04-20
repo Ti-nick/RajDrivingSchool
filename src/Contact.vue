@@ -110,11 +110,13 @@ export default {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .contact-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.65rem 1.4rem;
   border-radius: 2rem;
@@ -122,6 +124,8 @@ export default {
   font-size: 1rem;
   text-decoration: none;
   transition: opacity 0.15s, transform 0.15s;
+  flex: 1;
+  min-width: 0;
 }
 
 .contact-btn:hover {

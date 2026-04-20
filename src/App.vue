@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import { Collapse } from "bootstrap";
+
 export default {
   name: "App",
   data() {
@@ -72,14 +74,33 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll, { passive: true });
+    document.addEventListener("click", this.handleOutsideClick);
     this.handleScroll();
   },
   beforeUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    document.removeEventListener("click", this.handleOutsideClick);
   },
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 10;
+    },
+    collapseNav() {
+      const nav = document.getElementById("mainNav");
+      if (nav && nav.classList.contains("show")) {
+        (Collapse.getInstance(nav) ?? new Collapse(nav, { toggle: false })).hide();
+      }
+    },
+    handleOutsideClick(e) {
+      const header = this.$el.querySelector("header");
+      if (header && !header.contains(e.target)) {
+        this.collapseNav();
+      }
+    }
+  },
+  watch: {
+    $route() {
+      this.collapseNav();
     }
   }
 };

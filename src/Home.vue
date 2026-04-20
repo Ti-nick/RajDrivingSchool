@@ -13,19 +13,19 @@ export default {
         {
           title: "60 mins session",
           price: "A$80.00",
-          desc: "This 60-minute session offers personalized guidance through an interactive discussion with an expert.",
+          desc: "One-on-one lesson with personalized guidance.",
           link: "https://book.squareup.com/appointments/ha8lqllsr67p68/location/L3JKHMAAXNT7R/services"
         },
         {
           title: "90 mins session",
           price: "A$130.00",
-          desc: "This 90-minute session provides in-depth, informative content in a one-on-one appointment setting.",
+          desc: "Extended session for more in-depth practice.",
           link: "https://book.squareup.com/appointments/ha8lqllsr67p68/location/L3JKHMAAXNT7R/services"
         },
         {
           title: "Lesson + Test",
           price: "A$235.00",
-          desc: "A comprehensive lesson followed by a structured test to assess and enhance your understanding.",
+          desc: "A lesson followed by your driving test.",
           link: "https://book.squareup.com/appointments/ha8lqllsr67p68/location/L3JKHMAAXNT7R/services"
         }
       ],
@@ -90,23 +90,28 @@ export default {
           </p>
         </div>
 
-        <div class="row g-4 mb-5">
-          <div
-            v-for="(item, idx) in singlePricingItems"
-            :key="idx"
-            class="col-12 col-md-6 col-lg-3"
-          >
-            <div class="card h-100 shadow-sm">
-              <div class="card-body d-flex flex-column">
-                <h5 class="fw-bold">{{ item.title }}</h5>
-                <div class="fs-3 fw-bold my-2">{{ item.price }}</div>
-                <p class="text-muted flex-grow-1">{{ item.desc }}</p>
+        <div class="row justify-content-center mb-5">
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div
+                  v-for="(item, idx) in singlePricingItems"
+                  :key="idx"
+                  class="price-row"
+                  :class="{ 'price-row--last': idx === singlePricingItems.length - 1 }"
+                >
+                  <div class="price-row__left">
+                    <span class="price-row__title">{{ item.title }}</span>
+                    <span class="price-row__desc">{{ item.desc }}</span>
+                  </div>
+                  <span class="price-row__price">{{ item.price }}</span>
+                </div>
 
                 <a
-                  :href="item.link"
+                  :href="singlePricingItems[0].link"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-theme w-100"
+                  class="btn btn-theme w-100 mt-4"
                 >
                   Book Now
                 </a>
@@ -189,6 +194,42 @@ export default {
   background-color: #e2bc00;
   border-color: #e2bc00;
   color: #ffffff;
+}
+
+/* ================= PRICE ROWS ================= */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.price-row--last {
+  border-bottom: none;
+}
+
+.price-row__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding-right: 1rem;
+}
+
+.price-row__title {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.price-row__desc {
+  font-size: 0.82rem;
+  color: #6c757d;
+}
+
+.price-row__price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1a1a2e;
 }
 
 /* ================= DIVIDER ================= */
