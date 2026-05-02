@@ -37,6 +37,12 @@
               </li>
 
               <li class="nav-item">
+                <router-link to="/redeem" class="nav-link fw-semibold" active-class="active">
+                  Redeem Guide
+                </router-link>
+              </li>
+
+              <li class="nav-item">
                 <router-link to="/contact" class="nav-link fw-semibold" active-class="active">
                   Contact
                 </router-link>
@@ -56,6 +62,7 @@
         <p class="site-footer__brand">RAJ DRIVING SCHOOL</p>
         <nav class="site-footer__nav">
           <router-link to="/" class="site-footer__link">Home</router-link>
+          <router-link to="/redeem" class="site-footer__link">Redeem Guide</router-link>
           <router-link to="/contact" class="site-footer__link">Contact</router-link>
         </nav>
         <p class="site-footer__copy">&copy; {{ new Date().getFullYear() }} Raj Driving School. All rights reserved.</p>
