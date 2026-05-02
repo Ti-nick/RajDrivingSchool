@@ -7,7 +7,7 @@ export default {
         {
           title: "Book an Appointment",
           desc: "Visit the booking page and book an appointment as you normally would.",
-          link: "https://book.squareup.com/appointments/8c5megok1g64p7/location/LBD9DNG5PFQRR/services",
+          link: "https://book.squareup.com/appointments/ha8lqllsr67p68/location/L3JKHMAAXNT7R/services",
           linkLabel: "Open booking page",
           img: new URL('./assets/S1.png', import.meta.url).href
         },
